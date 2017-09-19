@@ -9,8 +9,8 @@ $link =	file_get_html($Link);
 $loopnumberforpagintion = $link->find("//[@id='w1']/div/div[1]/div[1]/div/b[2]",0)->plaintext;
 $text = str_replace(',', '', $loopnumberforpagintion);
 $paginations = $text  / 15 + 1;
-echo $paginations;
-//$loop =  (int)$paginations;
+
+echo $loop =  (int)$paginations;
 $loop =  1;
 
 
