@@ -27,18 +27,20 @@ for($i = 1; $i <= $loop; $i++)
 					{
 						$num        = $element->find('td[1]',0)->plaintext;
 						echo '||'.$num;
-						$casename    = $element->find('td[2]',0)->plaintext;
-						$caseno        = $element->find('td[3]',0)->plaintext;
-						$casey = $element->find('td[4]',0)->plaintext;
-						$bench = $element->find('td[5]',0)->plaintext;
-						$court = $element->find('td[6]',0)->plaintext;
-						$casetitle = $element->find('td[7]',0)->plaintext;
-						$matter = $element->find('td[8]',0)->plaintext;
-						$last = $element->find('td[9]',0)->plaintext;
-						$nextdate = $element->find('td[10]',0)->plaintext;
-						$href = $element->find('td[11]/a',0)->href;
-						$profilelink = 'http://202.83.168.217:8081'.$href;
+						$sourcename 	= 'High Court of Sindh, Bench at Sukkur';
+						$casename    	= $element->find('td[2]',0)->plaintext;
+						$caseno        	= $element->find('td[3]',0)->plaintext;
+						$casey 		= $element->find('td[4]',0)->plaintext;
+						$bench 		= $element->find('td[5]',0)->plaintext;
+						$court 		= $element->find('td[6]',0)->plaintext;
+						$casetitle 	= $element->find('td[7]',0)->plaintext;
+						$matter 	= $element->find('td[8]',0)->plaintext;
+						$last 		= $element->find('td[9]',0)->plaintext;
+						$nextdate 	= $element->find('td[10]',0)->plaintext;
+						$href 		= $element->find('td[11]/a',0)->href;
+						$profilelink 	= 'http://202.83.168.217:8081'.$href;
 						scraperwiki::save_sqlite(array('num'), array('num' => $num,
+											     				 'sourcename' => $sourcename,
 															 'casename' => $casename,
 															 'caseno' => $caseno, 
 															 'casey' => $casey, 
