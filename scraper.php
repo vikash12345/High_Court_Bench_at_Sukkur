@@ -26,7 +26,7 @@ for($i = 1; $i <= $loop; $i++)
 				if($num != null)
 					{
 						$num        = $element->find('td[1]',0)->plaintext;
-						echo '||'.$num;
+						echo '|'.$num;
 						$sourcename 	= 'High Court of Sindh, Bench at Sukkur';
 						$casename    	= $element->find('td[2]',0)->plaintext;
 						$caseno        	= $element->find('td[3]',0)->plaintext;
